@@ -28,4 +28,8 @@ urlpatterns = [
     path('recipe_delete/<id>/', recipe_delete, name='recipe_delete'),
 
     path('recipe_update/<id>/', recipe_update, name='recipe_update'),
+
+    path('register/', register, name='register'),
+
+    path('login/', login_page, name='login'),
 ]

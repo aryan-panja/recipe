@@ -15,17 +15,17 @@
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-
-            <div class="navbar-brand">user.first_name
-                user.last_name is loged in
+            {% if request.user.is_authenticated %}
+            <div class="navbar-brand">{{ user.username }}</div>
+            <div class="navbar-brand">{{ user.first_name }}
+                {{ user.last_name }} is loged in
             </div>
-
-
             <div>
-                LOGOUT
-                LOGIN
+                <a href="/logout/" class="btn btn-success">LOGOUT</a>
+                {% else %}
+                <a href="/login/" class="btn btn-success">LOGIN</a>
             </div>
-
+            {% endif %}
         </nav>
     </div>
     {% block content %}

@@ -8,11 +8,11 @@
     <h2>Add Recipe</h2>
     <div class="container mt-5">
         <label for="exampleInputEmail1" class="form-label">Recipe Name</label>
-        <input name="recipe_name" value="recipe.recipe_name" required type="text" class="form-control">
+        <input name="recipe_name" value="{{recipe.recipe_name}}" required type="text" class="form-control">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Recipe Description</label>
-        <textarea name="recipe_description" required class="form-control" id="exampleFormControlTextarea1"></textarea>
+        <textarea name="recipe_description" required class="form-control" id="exampleFormControlTextarea1"> {{recipe.recipe_description}} </textarea>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Recipe Image</label>
